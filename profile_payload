@@ -1,1 +1,4 @@
 ctest -j16 -V --progress || :
+make -j16 benchmark V=1 VERBOSE=1 || :
+cp -R ../testdata . || :
+./snappy_benchmark || :
